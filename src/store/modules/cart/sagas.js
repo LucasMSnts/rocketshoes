@@ -10,9 +10,19 @@ function* addToCart({ id }) {
         state.cart.find(p => p.id === id)
     );
 
-    if (productExits) {
-        const amount = productExits.amount + 1;
+    const stock = yield call(api.get, `stock/${id}`);
 
+    const stockAmount = stock.data.amount;
+    const currentAmount = productExits ? productExits.amount : 0;
+
+    const amount = currentAmount + 1;
+
+    if (amount > stockAmount) {
+        console.tron.warn('ERRO');
+        return;
+    }
+
+    if (productExits) {
         yield put(updateAmount(id, amount));
     } else {
         // yield equivalente ao await
