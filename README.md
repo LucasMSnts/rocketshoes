@@ -14,7 +14,7 @@ Projeto desenvolvido com as seguintes tecnologias:
 
 Para iniciar o projeto precisa executar o comando que simula uma API:
 ```
-  json-server server.json -p 3333
+  yarn json-server server.json -p 3333
 ```
 
 Depois de executar o comando acima, executar ``` yarn start ```
