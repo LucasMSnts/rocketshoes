@@ -1,5 +1,5 @@
 # Rocketshoes
-Projeto que emula uma loja virtual utilizando arquitetura Flux e React Hooks
+Projeto que simula uma loja virtual utilizando arquitetura Flux e React Hooks
 
 ## Tecnologias
 
